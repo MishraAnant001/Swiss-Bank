@@ -1,0 +1,68 @@
+<div class="container-fluid d-flex justify-content-center mt-1 mb-3">
+  <img src="../../../assets/images/logo.png" width="100" height="100" alt="">
+</div>
+<div *ngIf="!isAdmin">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" [routerLink]="['/']">
+          DashBoard
+        </button>
+      </h2>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" [routerLink]="['/user/accounts']">
+          Account
+        </button>
+      </h2>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" [routerLink]="['/user/fund-transfer']">
+          Fund Transfer
+        </button>
+      </h2>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" [routerLink]="['/user/transaction-history']">
+          Transaction History 
+        </button>
+      </h2>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isAdmin">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" [routerLink]="['/']">
+          DashBoard
+        </button>
+      </h2>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" [routerLink]="['admin/manage-users']">
+          Manage users
+        </button>
+      </h2>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" [routerLink]="['admin/manage-accounts']">
+          Manage accounts
+        </button>
+      </h2>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" [routerLink]="['admin/view-transactions']">
+          View transactions
+        </button>
+      </h2>
+    </div>
+  </div>
+</div>
